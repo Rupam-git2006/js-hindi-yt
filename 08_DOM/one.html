@@ -4,11 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM LEarning on chai aur code</h1>
-        <p>Lorem ipsum dolor sit amet cons</p>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM LEarning on chai aur code
+            <span style="display: none;">test text</span>
+        </h1>
+        <h2>Lorem ipsum dolo1 </h2>
+        <h2>Lorem ipsum dolo2 </h2>
+        <h2>Lorem ipsum dolo3 </h2>
+        <p>Lorem ipsum dolor gsit amet cons</p>
+
+        <ul>
+            <li class="list">one</li>
+            <li class="list">two</li>
+            <li class="list">three</li>
+            <li class="list">four</li>
+        </ul>
     </div>
 </body>
 </html>
+<!-- document.getElementById('title').id
+'title'
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+document.getElementById('title').setAttribute('class','test')
+undefined
+document.getElementById('title').setAttribute('id','bal') 
+
+const title = document.getElementById('title')
+undefined
+title
+<h1 id=​"title" class=​"heading">​DOM LEarning on chai aur code​</h1>​
+
+title.style.color = 'green'
+'green'
+
+
+title.textContent
+'DOM LEarning on chai aur code'
+title.innerHTML
+'DOM LEarning on chai aur code'
+title.textContent
+'DOM LEarning on chai aur code\n            test text\n        '
+title.innerText
+'DOM LEarning on chai aur code
+................................innerText & textContent has a major diff 
+
+
+document.querySelector('h2')
+<h2>​Lorem ipsum dolo1 ​</h2>​    //only querySelector return 1st head tag
+document.querySelectorAll('h2')
+NodeList(3) [h2, h2, h2]       //querySelector returns all head tags
+
+
+
+//diff ways to select id & class
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+
+
+//in this page only one h1 tag available 
+    const myH1 = document.querySelectorAll('h1')
+undefined
+myH1
+NodeList [h1#title.heading]
+myH1.style.color = 'green'
+VM1504:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:18
+(anonymous) @ VM1504:1Understand this errorAI
+
+myH1[0].style.color = 'green'
+'green'
+
+
+
+Array.from(tempClassList)
+(4) [li.list, li.list, li.list, li.list]
+const myConvert = Array.from(tempClassList)
+undefined
+myConvert
+(4) [li.list, li.list, li.list, li.list]
+
+//how to change color through forEach
+myConvert.forEach(function (li) {
+    li.style.color = 'orange'
+})
+    
+-->
